@@ -196,9 +196,6 @@ nrow(subset(nocoef.out, em.fail == 1)) # 0
 nrow(subset(nomis.out, em.fail == 1))  # 0
 nrow(subset(mis.out, em.fail == 1))    # 0
 
-with(nomis.out, tapply(em.fail, n, mean))
-with(mis.out, tapply(em.fail, n, mean))
-
 # tables with outliers removed ------------------------
 make.xtable(nocoef.out, no.coef = TRUE, clean = TRUE)
 make.xtable(nomis.out, clean = TRUE)
@@ -206,7 +203,6 @@ make.xtable(mis.out, clean = TRUE, add.consistency.col = FALSE)
 
 
 # Tables for supplementary materials/appendix
-# make.xtable(nomis.out, clean = FALSE) 
 make.xtable(nocoef.out, no.coef = TRUE, clean = FALSE)
 make.xtable(nomis.out, clean = FALSE)
 make.xtable(mis.out, clean = FALSE, add.consistency.col = FALSE)
@@ -226,9 +222,6 @@ with(mis.out, ftable(type, n, coef))
 nrow(subset(nocoef.out, em.fail == 1)) # 0
 nrow(subset(nomis.out, em.fail == 1))  # 0
 nrow(subset(mis.out, em.fail == 1))    # 0
-
-with(nomis.out, tapply(em.fail, n, mean))
-with(mis.out, tapply(em.fail, n, mean))
 
 # tables with outliers removed ------------------------
 make.xtable(nocoef.out, no.coef = TRUE, clean = TRUE)
